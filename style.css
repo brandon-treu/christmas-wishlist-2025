@@ -56,3 +56,10 @@ body {
 .gift:hover {
     transform: translateY(-5px);
 }
+
+body {
+    background-color: #fff;
+    background-image: radial-gradient(#ccc 1px, transparent 1px);
+    background-size: 20px 20px; /* spacing of dots */
+}
+
