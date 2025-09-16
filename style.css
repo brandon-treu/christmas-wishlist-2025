@@ -59,7 +59,17 @@ body {
 
 body {
     background-color: #fff;
-    background-image: radial-gradient(#ccc 1px, transparent 1px);
-    background-size: 20px 20px; /* spacing of dots */
+    background-image: radial-gradient(#F54927 1px, transparent 1px);
+    background-size: 10px 10px; /* spacing of dots */
+    background-attachment: fixed;
+}
+
+.content {
+    background: transparent; /* remove #fafafa */
+}
+
+.gift {
+    background: rgba(255, 255, 255, 0.85); /* slightly see-through white */
+    backdrop-filter: blur(3px); /* nice frosted effect */
 }
 

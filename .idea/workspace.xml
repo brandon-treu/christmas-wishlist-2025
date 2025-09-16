@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48b98217-de6e-4a7f-9b41-2d35c3d1fde7" name="Changes" comment="adding dots">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +71,8 @@
       <updated>1757957811857</updated>
       <workItem from="1757957813002" duration="553000" />
       <workItem from="1757958374862" duration="2700000" />
-      <workItem from="1757961199328" duration="2499000" />
+      <workItem from="1757961199328" duration="4608000" />
+      <workItem from="1757985875220" duration="1142000" />
     </task>
     <task id="LOCAL-00001" summary="init files for project">
       <option name="closed" value="true" />
