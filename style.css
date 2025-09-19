@@ -155,5 +155,35 @@ body {
     to   { text-shadow: 0 0 20px #fff, 0 0 40px #f54927; }
 }
 
+.gift {
+    width: 90%;            /* shrinks to fit small screens */
+    max-width: 600px;      /* never gets wider than this */
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(3px);
+}
+
+.content {
+    padding: 3rem 1rem;
+}
+
+@media (max-width: 600px) {
+    .content {
+        padding: 2rem 0.5rem;
+    }
+    .gift {
+        padding: 1rem;
+    }
+}
+
+h1, h2, p {
+    word-wrap: break-word;
+}
+
+
+
 
 
