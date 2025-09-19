@@ -177,13 +177,18 @@ body {
     .gift {
         padding: 1rem;
     }
+    .gift img {
+        max-width: 100%;   /* never overflow its container */
+        height: auto;      /* keep the aspect ratio */
+        border-radius: 8px; /* optional, matches your card style */
+        display: block;    /* removes extra bottom whitespace */
+        margin: 0 auto;    /* center the image */
+    }
 }
 
 h1, h2, p {
     word-wrap: break-word;
 }
-
-
 
 
 
