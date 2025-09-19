@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48b98217-de6e-4a7f-9b41-2d35c3d1fde7" name="Changes" comment="adding SWeatshirts" />
+    <list default="true" id="48b98217-de6e-4a7f-9b41-2d35c3d1fde7" name="Changes" comment="adding SWeatshirts">
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +70,7 @@
       <workItem from="1757958374862" duration="2700000" />
       <workItem from="1757961199328" duration="4608000" />
       <workItem from="1757985875220" duration="3161000" />
-      <workItem from="1758244482887" duration="3897000" />
+      <workItem from="1758244482887" duration="4301000" />
     </task>
     <task id="LOCAL-00001" summary="init files for project">
       <option name="closed" value="true" />
@@ -126,7 +128,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758248240742</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="adding SWeatshirts">
+      <option name="closed" value="true" />
+      <created>1758248657465</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1758248657465</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
