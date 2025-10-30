@@ -79,6 +79,15 @@ body {
     backdrop-filter: blur(3px); /* nice frosted effect */
 }
 
+/* Make gift images a reasonable, responsive size on desktop */
+.gift img {
+    max-width: 100%; /* keep images from being huge on large screens */
+    width: auto;      /* allow natural width up to max-width */
+    height: auto;     /* preserve aspect ratio */
+    display: block;   /* avoid inline spacing issues */
+    border-radius: 8px;
+}
+
 /* Mobile fallback */
 @media (max-width: 768px) {
     body {
