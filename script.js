@@ -33,3 +33,62 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// Initialize simple carousel inside the secret wish
+document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.querySelector('.gift.secret-wish .carousel');
+    if (!carousel) return;
+
+    const slides = carousel.querySelectorAll('.slide');
+    const slidesWrap = carousel.querySelector('.slides');
+    const prevBtn = carousel.querySelector('.carousel-prev');
+    const nextBtn = carousel.querySelector('.carousel-next');
+    const dotsWrap = carousel.querySelector('.carousel-dots');
+    let index = 0;
+    let interval = null;
+
+    function update() {
+        slidesWrap.style.transform = `translateX(-${index * 100}%)`;
+        const dots = dotsWrap.querySelectorAll('button');
+        dots.forEach((d, i) => d.classList.toggle('active', i === index));
+    }
+
+    function go(n) {
+        index = (n + slides.length) % slides.length;
+        update();
+    }
+
+    function next() { go(index + 1); }
+    function prev() { go(index - 1); }
+
+    // Create dots
+    slides.forEach((s, i) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.title = `Slide ${i + 1}`;
+        btn.addEventListener('click', () => { go(i); resetAuto(); });
+        dotsWrap.appendChild(btn);
+    });
+
+    // Wire buttons
+    if (nextBtn) nextBtn.addEventListener('click', () => { next(); resetAuto(); });
+    if (prevBtn) prevBtn.addEventListener('click', () => { prev(); resetAuto(); });
+
+    function startAuto() {
+        if (interval) return;
+        interval = setInterval(next, 4000);
+    }
+    function stopAuto() { if (interval) { clearInterval(interval); interval = null; } }
+    function resetAuto() { stopAuto(); startAuto(); }
+
+    // Start auto only when the secret is shown; observe class changes
+    const secret = document.querySelector('.gift.secret-wish');
+    const obs = new MutationObserver(() => {
+        if (secret.classList.contains('show')) startAuto(); else stopAuto();
+    });
+    obs.observe(secret, { attributes: true, attributeFilter: ['class'] });
+
+    // initial update
+    update();
+    if (secret.classList.contains('show')) startAuto();
+});
