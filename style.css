@@ -101,6 +101,55 @@ body {
     margin: 0 auto; /* ensure the image itself is centered inside the tile */
 }
 
+/* Secret wish: hidden by default, reveal with .show */
+.secret-wish {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 400ms ease, opacity 300ms ease, padding 300ms ease;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.secret-wish.show {
+    max-height: 600px; /* large enough to show typical gift card */
+    opacity: 1;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* Make the secret-wish stack vertically and ensure the image and paragraphs are visible */
+.gift.secret-wish {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.gift.secret-wish img {
+    max-width: 260px;
+    width: 60%;
+    height: auto;
+    display: block;
+    margin: 0.5rem auto;
+}
+.gift.secret-wish p {
+    width: 90%;
+    text-align: center;
+    margin: 0.2rem auto;
+}
+
+/* Simple button style */
+.btn {
+    background: #1e88e5;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.btn:focus {
+    outline: 3px solid rgba(30,136,229,0.3);
+}
+
 /* Mobile fallback */
 @media (max-width: 768px) {
     body {
