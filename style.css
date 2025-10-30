@@ -13,7 +13,11 @@ body {
 
 /* Parallax Sections */
 .parallax {
-    height: 100vh;
+    /* use min-height + padding instead of a fixed height so the section can be tighter
+       and sit closer to the next content while still looking good on tall screens */
+    min-height: 35vh;
+    height: auto;
+    padding: 2rem 0; /* reduce vertical footprint */
     background-image: url('images/christmas-bg.jpg'); /* Put your own background image */
     background-size: cover;
     background-position: center;
@@ -31,8 +35,8 @@ body {
 /* Overlay for readability */
 .overlay {
     background: rgba(0, 0, 0, 0.5);
-    padding: 2rem;
-    border-radius: 12px;
+    padding: 1rem; /* slightly less padding so the overlay is more compact */
+    border-radius: 6px;
     color: #fff;
 }
 
@@ -86,6 +90,15 @@ body {
     height: auto;     /* preserve aspect ratio */
     display: block;   /* avoid inline spacing issues */
     border-radius: 8px;
+}
+
+/* Center images only for tiles that explicitly use the center-img helper class */
+.gift.center-img {
+    justify-content: center; /* center the flex children horizontally */
+    text-align: center;
+}
+.gift.center-img img {
+    margin: 0 auto; /* ensure the image itself is centered inside the tile */
 }
 
 /* Mobile fallback */
