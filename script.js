@@ -1,11 +1,6 @@
-document.addEventListener("scroll", () => {
-    const scrolled = window.scrollY;
-    document.querySelectorAll(".parallax").forEach(el => {
-        el.querySelector("::before");
-        el.style.setProperty("--scroll", scrolled);
-        el.style.backgroundPositionY = `${scrolled * 0.5}px`;
-    });
-});
+// Parallax background movement removed: .parallax sections should remain static.
+// (Previously the script adjusted backgroundPositionY on scroll; that behavior
+// produced the parallax effect. It's intentionally disabled now.)
 
 document.addEventListener("scroll", () => {
     document.querySelectorAll(".gift").forEach((gift, i) => {
