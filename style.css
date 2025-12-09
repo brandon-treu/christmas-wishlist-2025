@@ -75,6 +75,18 @@ body {
     background-attachment: fixed;
 }
 
+/* Fixed Christmas tree background sitting behind all content */
+.tree-bg {
+    position: fixed;
+    inset: 0;
+    background-image: url('images/christmas-tree.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain; /* ensure full tree is visible */
+    z-index: -1; /* sit behind page content but above decorative layers */
+    pointer-events: none; /* allow clicks through to the page */
+}
+
 .content {
     background: transparent; /* remove #fafafa */
 }
@@ -217,7 +229,7 @@ body {
         background-color: #fff;
         background-image: radial-gradient(#ccc 1px, transparent 1px);
         background-size: 20px 20px;
-        z-index: -1; /* keep it behind everything */
+        z-index: -2; /* keep it behind the fixed tree but behind content */
     }
 }
 
